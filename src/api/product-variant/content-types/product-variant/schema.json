@@ -4,7 +4,8 @@
   "info": {
     "singularName": "product-variant",
     "pluralName": "product-variants",
-    "displayName": "ProductVariant"
+    "displayName": "ProductVariant",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,6 +17,33 @@
       "relation": "manyToOne",
       "target": "api::product.product",
       "inversedBy": "variants"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "sku": {
+      "type": "string"
+    },
+    "barcode": {
+      "type": "string"
+    },
+    "ean": {
+      "type": "string"
+    },
+    "upc": {
+      "type": "string"
+    },
+    "inventory_quantity": {
+      "type": "integer"
+    },
+    "price": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product-variant-price.product-variant-price",
+      "mappedBy": "variant"
     }
   }
 }

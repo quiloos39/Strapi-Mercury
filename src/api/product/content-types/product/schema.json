@@ -16,7 +16,8 @@
       "type": "uid"
     },
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "subtitle": {
       "type": "string"
@@ -25,25 +26,8 @@
       "type": "text"
     },
     "handle": {
-      "type": "uid"
-    },
-    "status": {
-      "type": "enumeration",
-      "enum": [
-        "draft",
-        "proposed",
-        "published",
-        "rejected"
-      ],
-      "default": "draft"
-    },
-    "thumbnail": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
+      "type": "uid",
+      "required": true
     },
     "dimensions": {
       "displayName": "Dimensions",
@@ -56,14 +40,6 @@
       "relation": "oneToMany",
       "target": "api::product-tag.product-tag",
       "mappedBy": "product"
-    },
-    "images": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
     },
     "variants": {
       "type": "relation",

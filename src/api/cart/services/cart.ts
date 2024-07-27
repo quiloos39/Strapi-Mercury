@@ -2,6 +2,6 @@
  * cart service
  */
 
-import { factories } from '@strapi/strapi';
+import { createMercuryCoreService } from "../../../libs/create-mercury-core-service";
 
-export default factories.createCoreService('api::cart.cart');
+export default createMercuryCoreService("api::cart.cart");

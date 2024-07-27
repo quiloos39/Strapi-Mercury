@@ -4,21 +4,53 @@
   "info": {
     "singularName": "billing-address",
     "pluralName": "billing-addresses",
-    "displayName": "BillingAddress"
+    "displayName": "BillingAddress",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
     "uuid": {
-      "type": "uid"
+      "type": "uid",
+      "configurable": false
     },
     "cart": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::cart.cart",
       "inversedBy": "billing_address"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "address_1": {
+      "type": "string"
+    },
+    "address_2": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "province": {
+      "type": "string"
+    },
+    "postal_code": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "metadata": {
+      "type": "json"
     }
   }
 }

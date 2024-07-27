@@ -14,5 +14,22 @@ export default {
    * This gives you an opportunity to set up your data model,
    * run jobs, or perform some special logic.
    */
-  bootstrap(/*{ strapi }*/) {},
+  async bootstrap({ strapi }) {
+    await strapi.entityService.create("api::country.country", {
+      data: {
+        name: "United States",
+        code: "US",
+        iso_2: "US",
+        iso_3: "USA",
+      },
+    });
+
+    await strapi.entityService.create("api::currency.currency", {
+      data: {
+        name: "United States Dollar",
+        code: "USD",
+        symbol: "$",
+      },
+    });
+  },
 };

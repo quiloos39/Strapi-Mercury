@@ -4,7 +4,8 @@
   "info": {
     "singularName": "region",
     "pluralName": "regions",
-    "displayName": "Region"
+    "displayName": "Region",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,6 +17,15 @@
     },
     "name": {
       "type": "string"
+    },
+    "currency_code": {
+      "type": "string"
+    },
+    "tax_rate": {
+      "type": "string"
+    },
+    "handle": {
+      "type": "uid"
     }
   }
 }
