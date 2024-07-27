@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uuid": {
+      "type": "uid"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "handle": {
+      "type": "uid"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "proposed",
+        "published",
+        "rejected"
+      ],
+      "default": "draft"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "dimensions": {
+      "displayName": "Dimensions",
+      "type": "component",
+      "repeatable": false,
+      "component": "product.dimensions"
+    },
+    "product_tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product-tag.product-tag",
+      "mappedBy": "product"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "variants": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product-variant.product-variant",
+      "mappedBy": "product"
+    }
+  }
+}

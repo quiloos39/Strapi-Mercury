@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "line_items",
+  "info": {
+    "singularName": "line-item",
+    "pluralName": "line-items",
+    "displayName": "LineItem"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uuid": {
+      "type": "uid"
+    },
+    "cart": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cart.cart",
+      "inversedBy": "line_items"
+    }
+  }
+}

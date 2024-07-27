@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_product_dimensions",
+  "info": {
+    "displayName": "Dimensions",
+    "icon": "puzzle"
+  },
+  "options": {},
+  "attributes": {
+    "width": {
+      "type": "decimal"
+    },
+    "height": {
+      "type": "decimal"
+    },
+    "length": {
+      "type": "decimal"
+    }
+  }
+}
